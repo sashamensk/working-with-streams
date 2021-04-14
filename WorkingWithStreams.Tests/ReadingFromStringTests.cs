@@ -11,9 +11,9 @@ namespace WorkingWithStreams.Tests
     public class ReadingFromStringTests
     {
         private readonly string content =
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." + Environment.NewLine +
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." + Environment.NewLine +
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." + Environment.NewLine +
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n" +
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n" +
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n" +
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
         [Test]
@@ -56,8 +56,8 @@ namespace WorkingWithStreams.Tests
         [TestCase(2, 'r', 'e', ExpectedResult = true)]
         [TestCase(3, 'e', 'm', ExpectedResult = true)]
         [TestCase(4, 'm', ' ', ExpectedResult = true)]
-        [TestCase(125, 'U', 't', ExpectedResult = true)]
-        [TestCase(447, '.', ' ', ExpectedResult = true)]
+        [TestCase(124, 'U', 't', ExpectedResult = true)]
+        [TestCase(444, '.', ' ', ExpectedResult = true)]
         [TestCase(448, ' ', ' ', ExpectedResult = false)]
         public bool ReadNextCharacter_StringReaderIsNotNull_ReturnsCurrentCharacter(int charsToRead, char expectedCharacter, char nextCharacter)
         {
@@ -92,8 +92,8 @@ namespace WorkingWithStreams.Tests
         [TestCase(2, 'r', 'r', ExpectedResult = true)]
         [TestCase(3, 'e', 'e', ExpectedResult = true)]
         [TestCase(4, 'm', 'm', ExpectedResult = true)]
-        [TestCase(125, 'U', 'U', ExpectedResult = true)]
-        [TestCase(447, '.', '.', ExpectedResult = true)]
+        [TestCase(124, 'U', 'U', ExpectedResult = true)]
+        [TestCase(444, '.', '.', ExpectedResult = true)]
         [TestCase(448, ' ', ' ', ExpectedResult = false)]
         public bool ReadNextLetter_StringReaderIsNotNull_ReturnsCurrentCharacter(int charsToRead, char expectedCharacter, char nextCharacter)
         {
