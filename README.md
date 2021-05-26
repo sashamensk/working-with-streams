@@ -178,7 +178,7 @@ Example of the string the StreamReader consumes:
 
 "Loremipsumdolorsitamet"
 
-For the string above the _ReadAsCharArrays_ method should produce in case _arraySize_ argument equals 5:
+In case _arraySize_ argument equals 5 the _ReadAsCharArrays_ method should produce this array:
 
 ```cs
 {
