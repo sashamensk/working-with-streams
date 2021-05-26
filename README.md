@@ -216,7 +216,7 @@ _ReadAndWriteIntegers_ method has two arguments - _streamReader_ and _outputWrit
 
 _ReadAndWriteChars_ method has two arguments - _streamReader_ and _outputWriter_. The method should read a character from _streamReader_ and then write this character to _outputWriter_. The method is very similar to _ReadAndWriteIntegers_, but the output is different.
 
-Also, read about [StreamWriter.Flush method](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush), and flush all buffers for _outputWriter_ to cause any buffered data to be written to the underlying stream after all data is written. Compare unit tests for _ReadAndWriteIntegers_ and _ReadAndWriteChars_ in [WritingToStreamTests](WorkingWithStreams.Tests/WritingToStreamTests.cs) class to understand why there is no need to flush _outputWriter_ buffers in _ReadAndWriteIntegers_ method.
+Also, read about [StreamWriter.Flush method](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush), and add the code to flush all buffers for _outputWriter_ to cause any buffered data to be written to the underlying stream after all data is written. Compare unit tests for _ReadAndWriteIntegers_ and _ReadAndWriteChars_ in [WritingToStreamTests](WorkingWithStreams.Tests/WritingToStreamTests.cs) class to understand why there is no need to flush _outputWriter_ buffers in _ReadAndWriteIntegers_ method.
 
 
 #### TransformBytesToHex
