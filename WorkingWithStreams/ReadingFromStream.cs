@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 
@@ -10,7 +10,7 @@ namespace WorkingWithStreams
     {
         public static string ReadAllStreamContent(StreamReader streamReader)
         {
-            // TODO #4-1. Implement the method by reading all content as a stream.
+            // TODO #4-1. Implement the method by reading all content as a string.
             throw new NotImplementedException();
         }
 
