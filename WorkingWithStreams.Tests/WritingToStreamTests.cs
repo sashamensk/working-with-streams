@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
@@ -13,7 +12,7 @@ namespace WorkingWithStreams.Tests
     [TestFixture]
     public class WritingToStreamTests
     {
-        private static readonly object[][] RemoveWordsFromContentAndWriteSource = new object[][]
+        private static readonly object[][] WriteLinesWithNumbersSource = new object[][]
         {
             new object[]
             {
@@ -131,7 +130,7 @@ namespace WorkingWithStreams.Tests
             return actualContent;
         }
 
-        [TestCaseSource(nameof(RemoveWordsFromContentAndWriteSource))]
+        [TestCaseSource(nameof(WriteLinesWithNumbersSource))]
         public void WriteLinesWithNumbers_ArgumentsAreValid_WritesToStreamWriter(string content, string expectedContent)
         {
             // Arrange
