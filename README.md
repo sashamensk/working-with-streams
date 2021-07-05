@@ -11,7 +11,7 @@ Estimated time to complete the task: 4h.
 
 ## Task Description
 
-The task has five sections with small sub-tasks in the code files, and this document contains a description only for some sub-tasks that require additional explanation. Each section has a list of questions for knowledge self-check.
+The task has five sections with small sub-tasks in the code files. This document contains a description only for some sub-tasks that require additional explanation. Each section has a list of questions for knowledge self-check.
 
 
 ### 1. Creating Readers and Writers
