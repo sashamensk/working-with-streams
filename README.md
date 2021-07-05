@@ -11,12 +11,12 @@ Estimated time to complete the task: 4h.
 
 ## Task Description
 
-The task has five sections with small sub-tasks in the code files. This document contains a description only for some sub-tasks that require additional explanation. Each section has a list of questions for knowledge self-check.
+The task has five sections with small sub-tasks in the code files. This document contains a description only for some sub-tasks that require additional explanation. Each section has a list of questions that will allow you to self-check your knowledge. 
 
 
 ### 1. Creating Readers and Writers
 
-Read the "Constructors" documentation pages for _StringReader_, _StringWriter_, _StreamReader_ and _StreamWriter_ classes, and implement the methods in [CreatingReaderWriters](WorkingWithStreams/CreatingReaderWriters.cs) class.
+Read the "Constructors" documentation pages for the _StringReader_, _StringWriter_, _StreamReader_, and _StreamWriter_ classes, and implement the methods in [CreatingReaderWriters](WorkingWithStreams/CreatingReaderWriters.cs) class.
 
 
 #### CreateStringWriterThatWritesCultureSpecificData
@@ -46,19 +46,19 @@ Answer these questions after completing all tasks in the section.
 
 ### 2. Reading from String
 
-Read the documentation pages for _StringReader.ReadToEnd_, _StringReader.ReadLine_, _StringReader.Read_, and _StringReader.Peek_ methods, and implement the methods in [ReadingFromString](WorkingWithStreams/ReadingFromString.cs) class.
+Read the documentation pages for the _StringReader.ReadToEnd_, _StringReader.ReadLine_, _StringReader.Read_, and _StringReader.Peek_ methods and implement the methods in the [ReadingFromString](WorkingWithStreams/ReadingFromString.cs) class.
 
 
 #### ReadNextCharacter
 
-If the underlying string (wrapped in StringReader) has characters available, the method should return true and the next character as "currentChar" argument. If the underlying string has no more characters available, the method should return false and " " (space) character as "currentChar" argument. You can use _Convert.ToChar_ method to convert an integer returned by _StringReader.Read_ method to a character.
+If the underlying string (wrapped in StringReader) has characters available, the method should return "true" and the next character as the "currentChar" argument. If the underlying string has no more characters available, the method should return "false" and the " " (space) character as the "currentChar" argument. You can use the _Convert.ToChar_ method to convert an integer returned by the _StringReader.Read_ method to a character.
 
 
 #### PeekNextCharacter
 
 If the underlying string has characters available, the method should return true and the next character as "currentChar" argument. If the underlying string has no more characters available, the method should return false and " " (space) character as "currentChar" argument. You can use _Convert.ToChar_ method to convert an integer returned by _StringReader.Read_ method to a character.
 
-To understand the difference between _StringReader.Read_ and _StringReader.Peek_ methods analyze and debug unit tests that covers _ReadNextCharacter_ and _PeekNextCharacter_ methods in [ReadingFromStringTests](WorkingWithStreams.Tests/ReadingFromStringTests.cs) class.
+To understand the difference between the _StringReader.Read_ and _StringReader.Peek_ methods, analyze and debug unit tests that covers _ReadNextCharacter_ and _PeekNextCharacter_ methods in [ReadingFromStringTests](WorkingWithStreams.Tests/ReadingFromStringTests.cs) class.
 
 
 #### Section Questions
@@ -73,23 +73,23 @@ Answer these questions after completing all tasks in the section.
 
 ### 3. Writing to String
 
-Read the documentation pages for _StringWriter.Write_ and _StringWriter.WriteLine_ methods, and implement the methods in [WritingToString](WorkingWithStreams/WritingToString.cs) class.
+Read the documentation pages about the _StringWriter.Write_ and _StringWriter.WriteLine_ methods and implement the methods in [WritingToString](WorkingWithStreams/WritingToString.cs) class.
 
 
 #### WriteBooleansWithNewLines
 
-_WriteBooleansWithNewLines_ should write three booleans one by one with two line terminators after first two boolean values:
+_WriteBooleansWithNewLines_ should write three Booleans one by one with two-line terminators after the first two Boolean values:
 
 "firstBoolean&lt;line terminator&gt;secondBoolean&lt;line terminator&gt;thirdBoolean"
 
-Use _StringWriter.Write(bool)_ and _StringWriter.WriteLine(bool)_ methods to write booleans to a string.
+Use _StringWriter.Write(bool)_ and _StringWriter.WriteLine(bool)_ methods to write Booleans to a string.
 
 See examples in unit tests in [WritingToStringTests.cs](WorkingWithStreams.Tests/WritingToStringTests.cs) file.
 
 
 #### WriteCharBuffer
 
-_WriteCharBuffer_ method should write only third, fourth and fifth characters of the _buffer_ array.
+The _WriteCharBuffer_ method should write only the third, the fourth, and the fifth characters of the _buffer_ array.
 
 Example:
 
@@ -103,7 +103,7 @@ See more examples in unit tests in [WritingToStringTests.cs](WorkingWithStreams.
 
 #### WriteCharBufferWithNewLines
 
-_WriteCharBufferWithNewLines_ method should write all characters in the _buffer_ array except the first and the last elements. Also, the method should write a line terminator.
+The _WriteCharBufferWithNewLines_ method should write all characters in the _buffer_ array except the first and the last elements. Also, the method should write a line terminator.
 
 Example:
 
@@ -126,18 +126,18 @@ Answer these questions after completing all tasks in the section.
 
 ### 4. Reading from Stream
 
-Read the documentation pages for _StreamReader.ReadToEnd_, _StreamReader.ReadLine_, _StreamReader.Read_, _StreamReader.Peek_ methods, and implement the methods in [ReadingFromString](WorkingWithStreams/ReadingFromStream.cs) class.
+Read the documentation pages for the _StreamReader.ReadToEnd_, _StreamReader.ReadLine_, _StreamReader.Read_, _StreamReader.Peek_ methods and implement the methods in the [ReadingFromString](WorkingWithStreams/ReadingFromStream.cs) class.
 
 
 #### ReadLineByLine
 
-_ReadLineByLine_ method should return an array of strings, and each element of the array is a text line that ends with line terminator in the underlying string.
+The _ReadLineByLine_ method should return an array of strings and each element of the array is a text line that ends with a line terminator in the underlying string.
 
-* _StreamReader.ReadLine_ method returns null if the end of the input stream is reached. Check the return value for null to stop reading from a stream.
-* Use [List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) list for storing a list of strings, and _List&lt;T&gt;.ToArray_ method for copying the list elements to a new array.
+* The _StreamReader.ReadLine_ method returns null if the end of the input stream is reached. Check if the returned value is null to stop reading from a stream.
+* Use the [List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) list for storing a list of strings and the _List&lt;T&gt;.ToArray_ method for copying the list elements to a new array.
 
 
-Example of the string the StreamReader consumes:
+The example of the string StreamReader consumes:
 
 "one&lt;line terminator&gt;two&lt;line terminator&gt;three"
 
@@ -160,25 +160,25 @@ while ((line = streamReader.ReadLine()) != null)
 
 #### ReadOnlyLettersAndNumbers
 
-_ReadOnlyLettersAndNumbers_ method should read only letters and numbers from a stream, and it should stop reading when the next character is not a letter or a number.
-* Use _StreamReader.Peek_ method for getting a next character from a stream but not consuming it.
-* _StreamReader.Peek_ method returns -1 if there are no characters to be read from the stream. See example of using the method on the [StreamReader.Peek documentation page](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader.peek).
-* Use _Char.IsLetterOrDigit_ method for indicating whether a character is a letter or number.
+The _ReadOnlyLettersAndNumbers_ method should read only letters and numbers from a stream, and it should stop reading when the next character is not a letter or a number.
+* Use the _StreamReader.Peek_ method for getting the next character from a stream but not consuming it.
+* The _StreamReader.Peek_ method returns -1 if there are no characters to be read from the stream. See an example of using the method on the [StreamReader.Peek documentation page](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader.peek).
+* Use the _Char.IsLetterOrDigit_ method for indicating whether a character is a letter or number.
 
-Example of the string the StreamReader consumers: "012345,6789". For this string the _ReadOnlyLettersAndNumbers_ method should produce: "012345".
+The example of the string StreamReader consumes: "012345,6789". For this string, the _ReadOnlyLettersAndNumbers_ method should produce: "012345".
 
 See examples in unit tests in [ReadingFromStreamTests.cs](WorkingWithStreams.Tests/ReadingFromStreamTests.cs) file.
 
 
 #### ReadAsCharArrays
 
-_ReadAsCharArrays_ method should return a jagged array with the characters from an underlying string that is sliced into array with _arraySize_ length.
+The _ReadAsCharArrays_ method should return a jagged array with the characters from an underlying string that is sliced into an array with the _arraySize_ length.
 
-Example of the string the StreamReader consumes:
+The example of the string StreamReader consumes:
 
 "Loremipsumdolorsitamet"
 
-In case _arraySize_ argument equals 5 the _ReadAsCharArrays_ method should produce this array:
+For the string above, in case the _arraySize_ argument equals 5, the _ReadAsCharArrays_ method should produce this array:
 
 ```cs
 {
@@ -192,7 +192,7 @@ In case _arraySize_ argument equals 5 the _ReadAsCharArrays_ method should produ
 
 See examples in unit tests in [ReadingFromStreamTests.cs](WorkingWithStreams.Tests/ReadingFromStreamTests.cs) file.
 
-You can use [List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) list for storing a list of char arrays, and [Array.Resize](https://docs.microsoft.com/en-us/dotnet/api/system.array.resize) method for changing the number of elements of a one-dimensional array.
+You can use the [List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) list for storing a list of char arrays and the [Array.Resize](https://docs.microsoft.com/en-us/dotnet/api/system.array.resize) method for changing the number of elements of a one-dimensional array.
 
 
 #### Section Questions
@@ -204,34 +204,34 @@ Answer these questions after completing all tasks in the section.
 
 ### 5. Writing to Stream
 
-Read the documentation pages for _StreamWriter.Write_ and _StreamWriter.WriteLine_ methods, and implement the methods in [WritingToStream](WorkingWithStreams/WritingToStream.cs) class.
+Read the documentation pages about the _StreamWriter.Write_ and _StreamWriter.WriteLine_ methods and implement the methods in the [WritingToStream](WorkingWithStreams/WritingToStream.cs) class.
 
 
 #### ReadAndWriteIntegers
 
-_ReadAndWriteIntegers_ method has two arguments - _streamReader_ and _outputWriter_. The method should read an integer from _streamReader_ and then write this integer to _outputWriter_.
+The _ReadAndWriteIntegers_ method has two arguments - _streamReader_ and _outputWriter_. The method should read an integer from _streamReader_ and then write this integer to _outputWriter_.
 
 
 #### ReadAndWriteChars
 
-_ReadAndWriteChars_ method has two arguments - _streamReader_ and _outputWriter_. The method should read a character from _streamReader_ and then write this character to _outputWriter_. The method is very similar to _ReadAndWriteIntegers_, but the output is different.
+The _ReadAndWriteChars_ method has two arguments - _streamReader_ and _outputWriter_. The method should read a character from _streamReader_ and then write this character to _outputWriter_. The method is very similar to _ReadAndWriteIntegers_ but the output is different.
 
-Also, read about [StreamWriter.Flush method](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush), and add the code to flush all buffers for _outputWriter_ to cause any buffered data to be written to the underlying stream after all data is written. Compare unit tests for _ReadAndWriteIntegers_ and _ReadAndWriteChars_ in [WritingToStreamTests](WorkingWithStreams.Tests/WritingToStreamTests.cs) class to understand why there is no need to flush _outputWriter_ buffers in _ReadAndWriteIntegers_ method.
+Also, read about the [StreamWriter.Flush method](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush) and add the code to flush all buffers for _outputWriter_ so that all buffered data is written to the underlying stream after all data is written. Compare unit tests for _ReadAndWriteIntegers_ and _ReadAndWriteChars_ in the [WritingToStreamTests](WorkingWithStreams.Tests/WritingToStreamTests.cs) class to understand why there is no need to flush the _outputWriter_ buffers in the _ReadAndWriteIntegers_ method.
 
 
 #### TransformBytesToHex
 
-_TransformBytesToHex_ method should read an integer from _streamReader_, and write the value as a hex string to _outputWriter_.
+The _TransformBytesToHex_ method should read an integer from _streamReader_ and write the value as a hex string to _outputWriter_.
 
-* Use _StringWriter.Write_ overloaded method for writing a formatted string. More information about format string read in [Standard numeric format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings) article.
-* Use _StreamReader.Peek_ method for checking whether there are more characters in the underlying string.
+* Use the _StringWriter.Write_ overloaded method for writing a formatted string. Read more information about a format string in [Standard numeric format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings) article.
+* Use the _StreamReader.Peek_ method for checking whether there are more characters in the underlying string.
 
-Read about [StreamWriter.AutoFlush Property](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.autoflush), and analyze [unit tests](WorkingWithStreams.Tests/WritingToStreamTests.cs) to understand whether the buffer flushing is required for the _outputWriter_ or not.
+Read about the [StreamWriter.AutoFlush Property](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.autoflush) and analyze [unit tests](WorkingWithStreams.Tests/WritingToStreamTests.cs) to understand whether the buffer flushing is required for the _outputWriter_ or not.
 
 
 #### WriteLinesWithNumbers
 
-_WriteLinesWithNumbers_ method should read a text line from _streamReader_, add a line number, and write the updated line to _outputWriter_. Use _StringWriter.Write_ overloaded method for writing a formatted string.
+The _WriteLinesWithNumbers_ method should read a text line from _streamReader_, add a line number, and write the updated line to _outputWriter_. Use the _StringWriter.Write_ overloaded method for writing a formatted string.
 
 Example of the string the StreamReader consumes:
 
@@ -254,20 +254,20 @@ Analyze [unit tests](WorkingWithStreams.Tests/WritingToStreamTests.cs) to unders
 
 #### RemoveWordsFromContentAndWrite
 
-_RemoveWordsFromContentAndWrite_ method should read the content from _streamReader_, and then read words one by one from _wordsReader_, remove the words from the content, and write the updated content to the _outputWriter_. 
+The _RemoveWordsFromContentAndWrite_ method should read the content from _streamReader_ and then read words one by one from _wordsReader_, remove the words from the content, and write the updated content to _outputWriter_. 
 
-* Use _StreamReader.Peek_ method for checking whether there are more characters in the underlying string.
-* Store the content from _contentReader_ to a _StringBuilder_ instance, and use _StringBuilder.Replace_ method to remove words from the content string.
+* Use the _StreamReader.Peek_ method for checking whether there are more characters in the underlying string.
+* Store the content from _contentReader_ to the _StringBuilder_ instance, and use the _StringBuilder.Replace_ method to remove words from the content string.
 
-Example of the string the StreamReader consumes:
+Example of the string StreamReader consumes:
 
 "Lorem **ipsum** dolor sit amet, consectetur adipiscing elit, **sed** do eiusmod tempor incididunt ut labore et dolore magna **aliqua**."
 
-Word list string:
+The word list string is as follows:
 
 "ipsum&lt;line terminator&gt;aliqua&lt;line terminator&gt;sed"
 
-For the string above the _RemoveWordsFromContentAndWrite_ method should write this text to the output stream:
+For the string above, the _RemoveWordsFromContentAndWrite_ method should write this text to the output stream:
 
 ```
 "Lorem  dolor sit amet, consectetur adipiscing elit,  do eiusmod tempor incididunt ut labore et dolore magna ."
