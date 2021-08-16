@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -8,28 +9,84 @@ namespace WorkingWithStreams
 {
     public static class ReadingFromStream
     {
-        public static string ReadAllStreamContent(StreamReader streamReader)
+        public static string ReadAllStreamContent(StreamReader c)
         {
-            // TODO #4-1. Implement the method by reading all content as a string.
-            throw new NotImplementedException();
+            return c.ReadToEnd();
         }
 
         public static string[] ReadLineByLine(StreamReader streamReader)
         {
-            // TODO #4-2. Implement the method by reading lines of characters as a string array.
-            throw new NotImplementedException();
+            var list = new List<string>();
+            string line;
+            while ((line = streamReader.ReadLine()) != null)
+            {
+                list.Add(line);
+            }
+
+            return list.ToArray();
         }
 
         public static StringBuilder ReadOnlyLettersAndNumbers(StreamReader streamReader)
         {
-            // TODO #4-3. Implement the method by reading only letters and numbers, and write the characters to a StringBuilder.
-            throw new NotImplementedException();
+            StringBuilder result = new StringBuilder();
+            int index = 0;
+            while ((index = streamReader.Peek()) > -1)
+            {
+                if (!char.IsLetterOrDigit((char)index))
+                {
+                    break;
+                }
+                else
+                {
+                    streamReader.Read();
+                    result.Append((char)index);
+                }
+            }
+
+            return result;
         }
 
         public static char[][] ReadAsCharArrays(StreamReader streamReader, int arraySize)
         {
             // TODO #4-4. Implement the method by returning an underlying string that sliced into jagged array of characters according to arraySize.
-            throw new NotImplementedException();
+            string str = streamReader.ReadToEnd();
+            int numOfRows = str.Length / arraySize;
+            int addRowLen = str.Length % arraySize;
+
+            char[][] arr;
+
+            if (addRowLen == 0)
+            {
+                arr = new char[numOfRows][];
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    arr[i] = new char[arraySize];
+                }
+            }
+            else
+            {
+                arr = new char[numOfRows + 1][];
+
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    arr[i] = new char[arraySize];
+                }
+
+                arr[^1] = new char[addRowLen];
+            }
+
+            int index = 0;
+
+            foreach (var raw in arr)
+            {
+                for (int i = 0; i < raw.Length; i++)
+                {
+                    raw[i] = str[index];
+                    index++;
+                }
+            }
+
+            return arr;
         }
     }
 }

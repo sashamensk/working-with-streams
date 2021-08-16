@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 #pragma warning disable CA1062
@@ -9,32 +10,49 @@ namespace WorkingWithStreams
     {
         public static string ReadAllStreamContent(StringReader stringReader)
         {
-            // TODO #2-1. Implement the method by reading all content as a string with StringReader.ReadToEnd method.
-            throw new NotImplementedException();
+            return stringReader.ReadToEnd();
         }
 
         public static string ReadCurrentLine(StringReader stringReader)
         {
-            // TODO #2-2. Implement the method by reading a line of characters with StringReader.ReadLine method.
-            throw new NotImplementedException();
+            return stringReader.ReadLine();
         }
 
         public static bool ReadNextCharacter(StringReader stringReader, out char currentChar)
         {
-            // TODO #2-3. Implement the method by reading the next character with StringReader.Read method.
-            throw new NotImplementedException();
+            int temp;
+            if ((temp = stringReader.Read()) > -1)
+            {
+                currentChar = (char)temp;
+                return true;
+            }
+            else
+            {
+                currentChar = ' ';
+                return false;
+            }
         }
 
         public static bool PeekNextCharacter(StringReader stringReader, out char currentChar)
         {
-            // TODO #2-4. Implement the method by returning the next available character with StringReader.Peek method.
-            throw new NotImplementedException();
+            int temp;
+            if ((temp = stringReader.Peek()) > -1)
+            {
+                currentChar = (char)temp;
+                return true;
+            }
+            else
+            {
+                currentChar = ' ';
+                return false;
+            }
         }
 
         public static char[] ReadCharactersToBuffer(StringReader stringReader, int count)
         {
-            // TODO #2-5. Implement the method by creating a new array of chars and reading a block of characters to the array.
-            throw new NotImplementedException();
+            char[] arr = new char[count];
+            stringReader.Read(arr, 0, count);
+            return arr;
         }
     }
 }

@@ -9,38 +9,38 @@ namespace WorkingWithStreams
     {
         public static StringReader CreateStringReader(string str)
         {
-            // TODO #1-1. Implement the method by returning an instantiated object of the StringReader class.
-            throw new NotImplementedException();
+            StringReader result = new StringReader(str);
+            return result;
         }
 
         public static StringWriter CreateStringWriter()
         {
-            // TODO #1-2. Implement the method by returning an instantiated object of the StringWriter class.
-            throw new NotImplementedException();
+            StringWriter result = new StringWriter();
+            return result;
         }
 
         public static StringWriter CreateStringWriterThatWritesToStringBuilder(StringBuilder stringBuilder)
         {
-            // TODO #1-3. Implement the method by returning an instantiated object of the StringWriter class.
-            throw new NotImplementedException();
+            StringWriter result = new StringWriter(stringBuilder);
+            return result;
         }
 
         public static StringWriter CreateStringWriterThatWritesCultureSpecificData(CultureInfo cultureInfo)
         {
-            // TODO #1-4. Implement the method by returning an instantiated object of the StringWriter class.
-            throw new NotImplementedException();
+            StringWriter result = new StringWriter(cultureInfo);
+            return result;
         }
 
         public static StreamReader CreateStreamReaderFromStream(Stream stream)
         {
-            // TODO #1-5. Implement the method by returning an instantiated object of the StreamReader class.
-            throw new NotImplementedException();
+            StreamReader result = new StreamReader(stream);
+            return result;
         }
 
         public static StreamWriter CreateStreamWriterToStream(Stream stream)
         {
-            // TODO #1-6. Implement the method by returning an instantiated object of the StreamWriter class.
-            throw new NotImplementedException();
+            StreamWriter result = new StreamWriter(stream);
+            return result;
         }
     }
 }
