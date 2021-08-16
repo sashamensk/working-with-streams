@@ -12,18 +12,17 @@ namespace WorkingWithStreams
         public static void ReadAndWriteIntegers(StreamReader streamReader, StreamWriter outputWriter)
         {
             int num;
-            string str = string.Empty;
+            StringBuilder sb = new StringBuilder();
             while ((num = streamReader.Read()) != -1)
             {
-                str += num;
+                sb.Append(num);
             }
 
-            outputWriter.Write(str);
+            outputWriter.Write(sb);
         }
 
         public static void ReadAndWriteChars(StreamReader streamReader, StreamWriter outputWriter)
         {
-            // TODO #5-2. Implement the method by reading a character from the StreamReader and writing it to the outputStream with StreamWriter.Write() method.
             int num;
             List<char> list = new List<char>();
             while ((num = streamReader.Read()) != -1)
@@ -59,7 +58,6 @@ namespace WorkingWithStreams
 
         public static void RemoveWordsFromContentAndWrite(StreamReader contentReader, StreamReader wordsReader, StreamWriter outputWriter)
         {
-            // TODO #5-5. Implement the method by reading the content and words, removing words from the content, and writing the updated content to the outputWriter. Use StreamReader.Peek method for checking whether there are more characters in the underlying string.
             StringBuilder sb = new StringBuilder();
             List<string> list = new List<string>();
             while (contentReader.Peek() > -1)

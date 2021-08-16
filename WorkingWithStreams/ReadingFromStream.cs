@@ -48,7 +48,6 @@ namespace WorkingWithStreams
 
         public static char[][] ReadAsCharArrays(StreamReader streamReader, int arraySize)
         {
-            // TODO #4-4. Implement the method by returning an underlying string that sliced into jagged array of characters according to arraySize.
             string str = streamReader.ReadToEnd();
             int numOfRows = str.Length / arraySize;
             int addRowLen = str.Length % arraySize;

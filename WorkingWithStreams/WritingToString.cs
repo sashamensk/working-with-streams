@@ -39,7 +39,6 @@ namespace WorkingWithStreams
 
         public static void WriteBooleansWithNewLines(StringWriter stringWriter, bool firstBoolean, bool secondBoolean, bool thirdBoolean)
         {
-            // TODO #3-7. Implement the method by writing the three booleans to the StringWriter with StringWriter.Write(bool) and StringWriter.WriteLine(bool) methods.
             stringWriter.WriteLine(firstBoolean);
             stringWriter.WriteLine(secondBoolean);
             stringWriter.Write(thirdBoolean);
